@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAP No. 3</title>
+    <script>
+        function hitungTotal() {
+            // Harga menu
+            const hargaNasiGoreng = 25000;
+            const hargaMieGoreng = 20000;
+            const hargaAyamGoreng = 30000;
+
+            // Input jumlah makanan dari pengguna
+            const jumlahNasiGoreng = parseInt(prompt("Masukkan jumlah Nasi Goreng yang dipesan:", 0)) || 0;
+            const jumlahMieGoreng = parseInt(prompt("Masukkan jumlah Mie Goreng yang dipesan:", 0)) || 0;
+            const jumlahAyamGoreng = parseInt(prompt("Masukkan jumlah Ayam Goreng yang dipesan:", 0)) || 0;
+
+            // Hitung total sebelum diskon
+            const totalSebelumDiskon = 
+                (jumlahNasiGoreng * hargaNasiGoreng) +
+                (jumlahMieGoreng * hargaMieGoreng) +
+                (jumlahAyamGoreng * hargaAyamGoreng);
+
+            // Hitung diskon
+            let diskon = 0;
+            if (totalSebelumDiskon > 150000) {
+                diskon = 0.15 * totalSebelumDiskon;
+            } else if (totalSebelumDiskon > 100000) {
+                diskon = 0.10 * totalSebelumDiskon;
+            }
+
+            // Hitung total setelah diskon
+            const totalSetelahDiskon = totalSebelumDiskon - diskon;
+
+            // Tampilkan hasil
+            alert(
+                `Total Sebelum Diskon: Rp ${totalSebelumDiskon.toLocaleString('id-ID')}\n` +
+                `Diskon: Rp ${diskon.toLocaleString('id-ID')}\n` +
+                `Total Setelah Diskon: Rp ${totalSetelahDiskon.toLocaleString('id-ID')}`
+            );
+        }
+    </script>
+</head>
+<body>
+    <h1>Kalkulator Total Pembelian</h1>
+    <p>Klik tombol di bawah untuk menghitung total pembelian Anda:</p>
+    <button onclick="hitungTotal()">Hitung Total</button>
+</body>
+</html>

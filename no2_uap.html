@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAP No. 2</title>
+    <style>
+        /* Gaya umum untuk tabel */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Gaya untuk border tabel */
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        /* Gaya untuk header tabel */
+        th {
+            background-color: lightyellow;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        /* Gaya untuk kolom waktu dan istirahat */
+        .waktu, .istirahat {
+            background-color: wheat; /* Cream */
+            font-weight: bold;
+        }
+
+        /* Gaya untuk kolom Senin */
+        .senin {
+            background-color: pink;
+        }
+
+        /* Gaya untuk kolom Selasa */
+        .selasa {
+            background-color: lightgreen;
+        }
+
+        /* Gaya untuk kolom Rabu */
+        .rabu {
+            background-color: plum; /* Ungu */
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th class="waktu">Waktu</th>
+            <th class="senin">Senin</th>
+            <th class="selasa">Selasa</th>
+            <th class="rabu">Rabu</th>
+        </tr>
+        <tr>
+            <td class="waktu">07:00 - 08:00</td>
+            <td class="senin" rowspan="2">Matematika</td>
+            <td class="selasa">Bahasa Indonesia</td>
+            <td class="rabu" rowspan="2">Fisika</td>
+        </tr>
+        <tr>
+            <td class="waktu">08:00 - 09:00</td>
+            <td class="selasa">Kimia</td>
+        </tr>
+        <tr>
+            <td class="waktu">09:00 - 10:00</td>
+            <td class="senin">Biologi</td>
+            <td class="selasa">Matematika</td>
+            <td class="rabu">Bahasa Inggris</td>
+        </tr>
+        <tr>
+            <td class="waktu">10:00 - 11:00</td>
+            <td class="senin">Bahasa Inggris</td>
+            <td class="selasa" colspan="2">Prakarya</td>
+        </tr>
+        <tr>
+            <td class="waktu">11:00 - 12:00</td>
+            <td class="senin" colspan="3">Seni Budaya</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="istirahat">Istirahat</td>
+        </tr>
+    </table>
+</body>
+</html>
+
